@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://www.example.com/courses" elementFormDefault="qualified">
+	<xs:element name="CourseId">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:long"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PersonId">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:long"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CourseRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="title" type="xs:string"/>
+				<xs:element name="lecturerId" type="xs:long"/>
+				<xs:element name="date" type="xs:date"/>
+				<xs:element name="capacity" type="xs:integer"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EnrollmentRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="studentId" type="xs:long"/>
+				<xs:element name="courseId" type="xs:long"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WithdrawRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="studentId" type="xs:long"/>
+				<xs:element name="courseId" type="xs:long"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RegisterRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="type" type="xs:string"/>
+				<xs:element name="name" type="xs:string"/>
+				<xs:element name="surname" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Confirmation">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="message" type="xs:string"/>
+				<xs:element name="code" type="xs:integer"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
